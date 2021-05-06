@@ -1,0 +1,69 @@
+.pt {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary);
+  color: var(--bg-color);
+  height: 20%;
+  width: 100vw;
+  padding: 4vw;
+}
+
+
+.pt1 .title {
+  font-size: 22px;
+  font-weight: 700;
+}
+.pt1 p {
+  width: 60%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.pt2{
+  min-width: 400px;
+  text-align: center;
+}
+
+.pt2 .form input {
+  background-color: var(--primary);
+  color: var(--bg-color);
+  border-bottom: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 5px 25px;
+}
+
+.pt2 .form input::placeholder {
+  color: var(--bg-color);
+}
+.pt2 .form input:focus {
+  color: var(--bg-color);
+  outline: none;
+}
+
+.pt2 .btn {
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  color: var(--primary);
+  background-color: var(--bg-color);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .pt{
+    flex-direction: column;
+    height: 300px;
+  }
+
+  .pt1 p {
+    width: 100%;
+    text-align: center;
+  }
+  .pt1 .title {
+    text-align: center;
+  }
+
+}
