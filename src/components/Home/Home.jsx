@@ -36,7 +36,7 @@ function Home() {
             amount of information about your product. Start increasing your user
             base upon the launch of your product
           </p>
-          <a className="home-btn" href="#">
+          <a className="home-btn" href="/">
             Explore Demos
           </a>
         </div>
