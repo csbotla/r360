@@ -52,13 +52,14 @@
   justify-content: center;
   text-decoration: none;
   list-style: none;
+
   /* border: 2px solid yellow; */
 }
 
 .nav-menu ul li a {
   font-weight: 700;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--secondary);
   transition: 1000ms;
 }
 

@@ -1,27 +1,32 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Consumer } from "./Context";
 import Logo from "./Logo";
 import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const { style, toggleStyle } = useContext(Consumer);
 
   return (
     <div>
-      <nav className="navbar">
+      <nav className={"navbar " + style}>
         <div className="navbar-container">
           <Logo />
+          <div style={{ cursor: "pointer" }} onClick={toggleStyle}>
+            {style === "light" ? "🔅" : "🌙"}
+          </div>
           <div className="nav-menu">
             <ul className={click ? "nav-options active" : "nav-options"}>
               <li className="nav-item">
-                <Link>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link>Products</Link>
               </li>
               <li className="nav-item">
-                <Link>About Us</Link>
+                <Link to="/about">About Me</Link>
               </li>
               <li className="nav-item">
                 <Link>Demos</Link>

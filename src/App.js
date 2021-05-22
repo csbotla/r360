@@ -1,15 +1,34 @@
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { Provider } from "./components/Context";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
+import About from "./Pages/AboutMe";
+import HomePage from "./Pages/HomePage";
 
 function App() {
+
+  const [style, setStyle] = useState("light");
+  function toggleStyle() {
+    setStyle(style => (style === "light" ? "dark" : "light"));
+  }
+
   return (
-    <div className="App">
-      <Router>
-        <Home />
-      </Router>
-    </div>
+    <Router>
+      <div className="App">
+        <Provider value={{ style, toggleStyle }}>
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </Provider>
+      </div>
+    </Router>
   );
 }
 

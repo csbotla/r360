@@ -7,6 +7,13 @@
   --fontFamily:"Poppins", sans-serif;
 }
 
+
+.dark{
+  --primary: #c162c1;
+  --secondary: #fff;
+  --bg-color:rgba(0, 0, 0, 0.911);
+}
+
 * {
   box-sizing: border-box;
   font-family: var(--fontFamily);

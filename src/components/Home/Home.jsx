@@ -1,26 +1,25 @@
 import React from "react";
-import banner1 from "../assets/banner1.jpg";
-import banner2 from "../assets/banner2.jpg";
-import globe from "../assets/globe.svg";
-import persons from "../assets/persons.svg";
-import profile1 from "../assets/profile1.jpeg";
-import profile2 from "../assets/profile2.jpeg";
-import screenshot1 from "../assets/screenshot1.jpg";
-import screenshot2 from "../assets/screenshot2.jpg";
-import smiley from "../assets/smiley.svg";
-import ClientFeedback from "./ClientFeedback";
-import Footer from "./Footer";
+import banner1 from "../../assets/banner1.jpg";
+import banner2 from "../../assets/banner2.jpg";
+import globe from "../../assets/globe.svg";
+import persons from "../../assets/persons.svg";
+import profile1 from "../../assets/profile1.jpeg";
+import profile2 from "../../assets/profile2.jpeg";
+import screenshot1 from "../../assets/screenshot1.jpg";
+import screenshot2 from "../../assets/screenshot2.jpg";
+import smiley from "../../assets/smiley.svg";
+import ClientFeedback from "../ClientFeedback";
+import Footer from "../Footer";
+import Newsletter from "../Newsletter";
 import "./Home.css";
-import Navbar from "./Navbar";
-import Newsletter from "./Newsletter";
 
 function Home() {
   return (
     <div>
       <div className="home-container">
-        <div className="home-nav">
+        {/* <div className="home-nav">
           <Navbar />
-        </div>
+        </div> */}
 
         <div className="banner-container">
           <div className="banner"></div>
